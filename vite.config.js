@@ -2,20 +2,26 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    outDir: 'build', // Specify output directory as 'build'
+    outDir: 'build', // Output directory for Vercel deployment
+
+    // Optional: Suppress large chunk warning (adjust as needed)
+    chunkSizeWarningLimit: 1000, // in KB (default is 500)
+
     rollupOptions: {
       output: {
-        // Optional: To ensure correct output handling for Vite, you can configure the output format and naming conventions.
-        // This section is only required if you want to specify custom settings for the build output.
+        // Manual chunk splitting (especially helpful for large node_modules or libraries)
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'; // puts all node_modules into a separate chunk
+          }
+        },
       },
     },
   },
   optimizeDeps: {
-    // Ensure jspdf and jspdf-autotable are correctly included in optimization for faster builds.
     include: ['jspdf', 'jspdf-autotable'],
   },
 });
