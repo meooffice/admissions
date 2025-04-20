@@ -1,0 +1,57 @@
+/* Container for the entire form */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Wrapper for form elements */
+.form-wrapper {
+    width: 100%;
+    max-width: 800px; /* Limit the width for readability */
+    padding: 20px;
+}
+
+/* Form header styling */
+.form-header {
+    text-align: center;
+}
+
+/* Card styling for form sections */
+.form-card {
+    margin-bottom: 20px; /* Margin between cards */
+}
+
+/* Flex container for general details fields */
+.general-details-fields, .employee-fields {
+    display: flex;
+    justify-content: space-between; /* Space between fields */
+    margin-bottom: 20px; /* Margin between field groups */
+}
+
+/* Field item styling */
+.field-item {
+    flex: 1; /* Make each item take equal space */
+    margin-right: 10px; /* Space between fields */
+}
+
+/* Remove margin for the last item to avoid extra space */
+.field-item:last-child {
+    margin-right: 0; /* No margin for the last field */
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+    .general-details-fields, .employee-fields {
+        flex-direction: column; /* Stack fields vertically on smaller screens */
+    }
+
+    .field-item {
+        margin-right: 0; /* Reset margin for field items */
+        margin-bottom: 10px; /* Margin between fields on smaller screens */
+    }
+}

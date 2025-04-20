@@ -1,0 +1,94 @@
+/* Body Styles */
+body {
+    background-color: #f0f4c3; /* Soft yellow background for the entire page */
+}
+
+/* Title (h2) Styles */
+h2, .school-data-container {
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff; /* White text color */
+    background-color: #3f51b5; /* Indigo background for the "School Data" section */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners for the School Data section */
+}
+
+/* Card Styles */
+.card {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 30px; /* Increased space between cards */
+    background-color: #b72424; /* White background for all cards */
+    border-radius: 8px; /* Slight rounding of card corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    padding: 16px;
+}
+
+/* Card 1 Specific Styles */
+.card1 {
+    background-color: #aea29f; /* Deep orange background for Card 1 */
+    color: rgb(164, 41, 41);
+}
+
+/* Card 2 Specific Styles */
+.card2 {
+    background-color: #42a5f5; /* Blue background for Card 2 */
+    color: white;
+}
+
+/* Carousel Styles */
+.carousel img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #4caf50; /* Green background for the footer */
+    color: rgb(192, 28, 28);
+    padding: 30px 20px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Table Styles */
+.ant-table {
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+    background-color: #e0f2f1; /* Light teal background for the table */
+}
+
+/* Alternate Row Colors */
+.ant-table-tbody > tr:nth-child(odd) {
+    background-color: #b2dfdb; /* Light greenish-blue for odd rows */
+}
+
+.ant-table-tbody > tr:nth-child(even) {
+    background-color: #80cbc4; /* Slightly darker greenish-blue for even rows */
+}
+
+/* Table Cell and Header Styles */
+.ant-table td,
+.ant-table th {
+    padding: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #424242; /* Dark grey text color */
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        font-size: 12px;
+        background-color: #f5f5f5; /* Light grey background for cards on mobile */
+    }
+
+    .ant-table td,
+    .ant-table th {
+        font-size: 10px;
+    }
+}
